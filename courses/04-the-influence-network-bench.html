@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 4 of 6. The real advice and friendship ties of 21 managers at a small high-tech manufacturer (Krackhardt, 1987), computed in your browser. Who is asked, who brokers, how far a proposal spreads when you pre-wire the top of the chart, the most-asked or the brokers, and what happens when the broker leaves.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="The influence-network bench - learn stakeholder management with phoebe">
+<meta property="og:description" content="Session 4 of 6. 21 real managers' advice ties. Pre-wire the top of the chart and 7 of 21 back you; pre-wire the brokers and all 21 do, in a model labelled as a model.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-stakeholder-management-with-phoebe/courses/04-the-influence-network-bench.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-stakeholder-management-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The influence-network bench - learn stakeholder management with phoebe">
+<meta name="twitter:description" content="Session 4 of 6. Who do you pre-wire? 21 real managers' ties, computed in your browser.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-stakeholder-management-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 4 · The influence-network bench - learn stakeholder management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-stakeholder-management-with-phoebe</a> / Session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Stakeholder Management with Phoebe · Session 4 of 6</div>
+    <h1>The influence-network <span class="accent">bench</span></h1>
+    <p class="sub">Sessions 1 to 3 drew the influence route by asking people. Tonight we look at a real one. In 1987 David Krackhardt asked 21 managers at a small high-tech manufacturer who they went to for advice, who their friends were and who they reported to. Those ties are on the bench below, and every count and centrality is computed from them in your browser. On top of the real ties sits a stated model of how support spreads, so you can test the question every data leader faces before a big ask: if you can only have three conversations first, with whom?</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Bench night</span>
+      <span class="chip audience">Bring your decision path from session 1</span>
+      <span class="chip audience">No code tonight, all clicking</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:2">3-12 · How ties become numbers</span>
+      <span class="a3" style="flex:6">12-38 · The bench, strategy by strategy</span>
+      <span class="a4" style="flex:2">38-45 · The limits, and Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">Krackhardt's 1987 paper in Social Networks introduced cognitive social structures: instead of asking each person only about their own ties, he asked every manager to report the whole network as they saw it. The abstract describes the example as the management team of a small manufacturing firm; the UCINET dataset page reports a high-tech equipment maker on the US west coast with just over 100 employees. The bench uses the version most often analysed: each manager's own report of who they go to for advice, who they count as friends, and who they report to. 21 people, 190 advice ties, 102 friendship ties, 20 reporting lines. Manager 7 is the CEO; managers 2, 14, 18 and 21 are vice presidents; everyone else is a manager reporting to one of them.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">measured = counted or computed from the real ties</span>
+      <span class="pill">modelled = a stated rule applied on top of the real ties</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> The difference between being asked and being a broker, read off real data; the measured gap between the formal chart and the advice network; how far a proposal spreads when you pre-wire the top of the chart, the most-asked people or the brokers, in a model that says it is a model; what happens to your plan when one broker leaves; and the limits of every number on the bench.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers in-degree, betweenness and the threshold rule</span>
+      <h2>How ties become numbers</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">Three numbers carry the bench. Two are measured from the ties and one is a model. Knowing which is which is the whole difference between reading the bench and being fooled by it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three panels. Asked by: four colleagues each draw an arrow into one person, an in-degree of 4. Broker: two groups of three are joined only through one person in the middle, highlighted. Threshold, modelled: a manager whose three advisers include two backers, two of three is 67 percent, which clears a 65 percent threshold, so the manager backs it too.">
+        <defs>
+          <filter id="s4aSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <marker id="s4aAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#13292C" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s4aH { font: 800 12px Inter, sans-serif; fill: #13292C; }
+          .s4aS { font: 400 11px Inter, sans-serif; fill: #4F6366; }
+          .s4aB { font: 800 11px Inter, sans-serif; fill: #7A3416; }
+          .s4aA { font: 700 11px Inter, sans-serif; fill: #0B6E79; }
+          .s4aW { font: 800 12px Inter, sans-serif; fill: #FFFFFF; }
+          .s4aK { font: 800 12px Inter, sans-serif; fill: #13292C; }
+          .s4aN { font: 400 12px Inter, sans-serif; fill: #4F6366; }
+        </style>
+
+        <g filter="url(#s4aSk)" fill="none" stroke="#13292C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="30" y="40" width="260" height="196" rx="10" transform="rotate(-0.6 160 138)" fill="#FFFFFF"/>
+          <rect x="310" y="40" width="260" height="196" rx="10" transform="rotate(0.5 440 138)" fill="#FFFFFF"/>
+          <rect x="590" y="40" width="260" height="196" rx="10" transform="rotate(-0.5 720 138)" fill="#E8F5F6"/>
+          <path d="M84 98 L144 132" marker-end="url(#s4aAr)"/>
+          <path d="M236 98 L176 132" marker-end="url(#s4aAr)"/>
+          <path d="M84 176 L144 156" marker-end="url(#s4aAr)"/>
+          <path d="M236 176 L176 156" marker-end="url(#s4aAr)"/>
+          <path d="M352 104 L352 176 L398 140 Z M352 104 L398 140" stroke-width="1.6"/>
+          <path d="M528 104 L528 176 L482 140 Z M528 104 L482 140" stroke-width="1.6"/>
+          <path d="M412 140 L428 140 M452 140 L468 140" stroke-width="2.4"/>
+          <path d="M650 92 L700 128" marker-end="url(#s4aAr)"/>
+          <path d="M720 84 L720 122" marker-end="url(#s4aAr)"/>
+          <path d="M790 92 L740 128" marker-end="url(#s4aAr)"/>
+        </g>
+
+        <circle cx="160" cy="145" r="15" fill="#0B6E79"/><text class="s4aW" x="160" y="149" text-anchor="middle">4</text>
+        <circle cx="74" cy="92" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="246" cy="92" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="74" cy="182" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="246" cy="182" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+
+        <circle cx="352" cy="104" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="352" cy="176" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="400" cy="140" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="528" cy="104" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="528" cy="176" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="480" cy="140" r="11" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="440" cy="140" r="13" fill="#B4532A"/><text class="s4aW" x="440" y="144" text-anchor="middle">B</text>
+
+        <circle cx="640" cy="84" r="12" fill="#0B6E79"/><text class="s4aW" x="640" y="88" text-anchor="middle">✓</text>
+        <circle cx="720" cy="72" r="12" fill="#0B6E79"/><text class="s4aW" x="720" y="76" text-anchor="middle">✓</text>
+        <circle cx="800" cy="84" r="12" fill="#FFFFFF" stroke="#13292C" stroke-width="1.6"/>
+        <circle cx="720" cy="140" r="15" fill="#0B6E79"/><text class="s4aW" x="720" y="144" text-anchor="middle">Y</text>
+
+        <text class="s4aH" x="46" y="66">ASKED BY · in-degree</text>
+        <text class="s4aS" x="46" y="226">four colleagues come to this person</text>
+        <text class="s4aA" x="46" y="212">measured</text>
+        <text class="s4aH" x="326" y="66">BROKER · betweenness</text>
+        <text class="s4aS" x="326" y="226">the only short route between groups</text>
+        <text class="s4aA" x="326" y="212">computed from the ties</text>
+        <text class="s4aH" x="606" y="66">THRESHOLD</text>
+        <text class="s4aK" x="690" y="186">2 of 3 = 67%</text>
+        <text class="s4aB" x="690" y="204">clears 65%: Y backs it</text>
+        <text class="s4aB" x="606" y="226">modelled, not measured</text>
+
+        <text class="s4aN" x="30" y="268">Counted, computed, modelled: the bench labels every number with one of the three.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - in-degree and betweenness are facts about the ties; whether someone backs you is the model's assumption</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Asked by, and brokering, are not the same<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>In-degree</strong> counts how many colleagues name a person as someone they go to for advice. It is a popularity count among people seeking help, and it is measured directly: no assumption beyond the survey itself.</p>
+        <p><strong>Betweenness</strong> counts, for every pair of colleagues, the share of the shortest advice routes between them that pass through a person, and adds it up. A person with modest in-degree can have high betweenness if they connect groups that otherwise do not talk. That is the broker of session 1 and of Burt's structural holes work (abstract read): the person on the only short route between two parts of the organisation. The bench computes it with the standard algorithm on the directed advice ties, no weights, nothing normalised.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The threshold rule, and why it is labelled a model<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Nobody in Krackhardt's firm was ever asked about Sunniva's platform. To ask "how far would support spread?" the bench needs a rule, and it uses the linear threshold idea from Kempe, Kleinberg and Tardos (2003, read at source): a person comes on board once enough of the people who influence them already have. Here, a manager backs the proposal once at least a set share of the people they go to for advice back it. You pre-wire a few people; the rule runs in rounds until nobody else moves.</p>
+        <p>Kempe and colleagues give every person their own threshold, drawn at random. The bench gives everyone one shared threshold, set with a slider, so the results are exact and repeatable. That is a simplification real people do not obey. Read the ORDER of the strategies on the bench, which survives most settings, and never the exact count as a forecast for your own company.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="bench">
+    <div class="section-kicker">
+      <span class="klabel">Build-along · the bench</span>
+      <h2>21 real managers, and who you pre-wire</h2>
+      <span class="tag demo">★ 26 min · the main event</span>
+    </div>
+    <p class="lede">The bench opens on the default: advice ties, a 65 percent threshold, three people to pre-wire, and the first strategy selected. Read the formal-role table and the map first, then work down the strategies in order and say out loud what changed before moving on. Every count below is one the bench prints; if your screen shows something else, trust the screen and tell me.</p>
+
+    <div id="stk-bench" data-live-bench></div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bars for the four strategies at the default settings. Top of the org chart, managers 7, 14 and 21: 7 of 21 back it, the rule fails. The most-asked, 2, 18 and 21: 5 of 21, fails. The brokers, 18, 21 and 7: 21 of 21, passes. Random, 200 draws: 3.5 on average, passes in 1 of 200. A dashed line marks 11, the majority.">
+        <defs>
+          <filter id="s4bSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="29" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s4bHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#0B6E79" stroke-width="1" opacity=".5"/></pattern>
+        </defs>
+        <style>
+          .s4bH { font: 800 12px Inter, sans-serif; fill: #13292C; }
+          .s4bL { font: 600 12px Inter, sans-serif; fill: #13292C; }
+          .s4bS { font: 400 11px Inter, sans-serif; fill: #4F6366; }
+          .s4bB { font: 800 11px Inter, sans-serif; fill: #7A3416; }
+          .s4bV { font: 800 12px Inter, sans-serif; fill: #064A52; }
+          .s4bW { font: 800 12px Inter, sans-serif; fill: #FFFFFF; }
+          .s4bN { font: 400 12px Inter, sans-serif; fill: #4F6366; }
+        </style>
+
+        <text class="s4bH" x="30" y="26">BACKERS AT THE DEFAULT · advice ties, 65% threshold, 3 pre-wired</text>
+
+        <g filter="url(#s4bSk)" fill="none" stroke="#13292C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="260" y="70" width="160" height="30" rx="5" transform="rotate(-0.4 340 85)" fill="url(#s4bHc)"/>
+          <rect x="260" y="122" width="114" height="30" rx="5" transform="rotate(0.4 317 137)" fill="url(#s4bHc)"/>
+          <rect x="260" y="174" width="480" height="30" rx="5" transform="rotate(-0.2 500 189)" fill="#B4532A"/>
+          <rect x="260" y="226" width="81" height="30" rx="5" transform="rotate(0.5 300 241)" fill="#FFFFFF"/>
+          <path d="M511 52 L511 262" stroke="#4F6366" stroke-width="1.4" stroke-dasharray="5 4"/>
+        </g>
+
+        <text class="s4bS" x="511" y="46" text-anchor="middle">11 = majority</text>
+        <text class="s4bL" x="240" y="90" text-anchor="end">Top of the org chart</text>
+        <text class="s4bL" x="240" y="142" text-anchor="end">The most-asked</text>
+        <text class="s4bL" x="240" y="194" text-anchor="end">The brokers</text>
+        <text class="s4bL" x="240" y="246" text-anchor="end">Random, 200 draws</text>
+        <text class="s4bV" x="272" y="90">7 of 21</text>
+        <text class="s4bV" x="272" y="142">5 of 21</text>
+        <text class="s4bW" x="272" y="194">21 of 21</text>
+        <text class="s4bV" x="351" y="246">3.5 avg</text>
+        <text class="s4bS" x="526" y="90">7, 14, 21 · fails</text>
+        <text class="s4bS" x="390" y="142">2, 18, 21 · fails</text>
+        <text class="s4bW" x="350" y="194">18, 21, 7 · passes</text>
+        <text class="s4bS" x="526" y="246">passes in 1 of 200</text>
+
+        <text class="s4bN" x="30" y="284">Modelled backers on real ties. Rule: 11 or more back it, and the CEO (7) is one of them.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - swapping one vice president for another, 14 for 18, takes the plan from 7 backers to all 21</figcaption>
+    </figure>
+
+    <div class="steps">
+      <div class="step">
+        <p><strong>Read the formal role table before you touch anything.</strong> It is sorted by betweenness on the advice ties, and the formal role sits next to each number. Find the CEO, then find the person at the top.</p>
+        <div class="prompt-box good"><span class="label">★ Step 1 · measured, advice ties</span>Manager 18  Vice president   asked by 15   betweenness 88.9
+Manager 21  Vice president   asked by 15   betweenness 60.1
+Manager 7   CEO              asked by 13   betweenness 27.6
+Manager 10  Manager          asked by 9    betweenness 18.3
+...
+Manager 14  Vice president   asked by 10   betweenness 0.6</div>
+      </div>
+      <div class="step">
+        <p><strong>Select "Top of the org chart".</strong> The anti-lever: the CEO, then the vice presidents with the biggest teams. This is what most proposals do by default.</p>
+        <div class="prompt-box good"><span class="label">★ Step 2 · the anti-lever</span>Pre-wiring 7, 14, 21 on advice ties at a 65% threshold:
+7 of 21 back it after 2 rounds.
+Decision rule (11 or more, CEO included): fails.</div>
+      </div>
+      <div class="step">
+        <p><strong>Select "The most-asked people".</strong> The three with the highest in-degree. Popular is not the same as connected across groups.</p>
+        <div class="prompt-box good"><span class="label">★ Step 3 · most-asked</span>Pre-wiring 2, 18, 21: 5 of 21 back it after 1 round.
+Decision rule: fails.</div>
+      </div>
+      <div class="step">
+        <p><strong>Select "The brokers".</strong> The three with the highest betweenness. Watch the map fill in over the rounds.</p>
+        <div class="prompt-box good"><span class="label">★ Step 4 · brokers</span>Pre-wiring 18, 21, 7: 21 of 21 back it after 6 rounds.
+Decision rule: passes.</div>
+      </div>
+      <div class="step">
+        <p><strong>Select "Random, 200 seeded draws".</strong> The baseline any strategy has to beat.</p>
+        <div class="prompt-box good"><span class="label">★ Step 5 · random</span>3.5 of 21 back it on average; the decision rule
+passes in 1 of 200 draws.</div>
+      </div>
+      <div class="step">
+        <p><strong>Move the threshold.</strong> Set it to 30 percent, then to 80, and watch the comparison table. The strategy only matters in the middle.</p>
+        <div class="prompt-box good"><span class="label">★ Step 6 · the threshold slider</span>30%:  org chart 21, most-asked 21, brokers 21
+      (everyone moves easily; who you start with stops mattering)
+80%:  org chart 6, most-asked 4, brokers 7
+      (everyone is hard to move; three conversations are not enough)</div>
+      </div>
+      <div class="step">
+        <p><strong>Back to 65 percent, brokers selected. Tick "The broker leaves".</strong> Manager 18 leaves the firm. The bench re-runs your plan without them, then re-maps.</p>
+        <div class="prompt-box good"><span class="label">★ Step 7 · the break button</span>Manager 18 (top betweenness) leaves.
+The plan as it stood: 21 of 21 → 9 of 20, rule fails.
+Re-mapped on the smaller network (21, 10, 4): 20 of 20.
+Pairs cut off: 0.  Ordered pairs that need a longer route: 43.</div>
+      </div>
+      <div class="step">
+        <p><strong>Switch to friendship ties, untick the break, and run the strategies again.</strong> Then select "Your own pick" and try the CEO plus two managers: 7, 1 and 10 on advice ties.</p>
+        <div class="prompt-box good"><span class="label">★ Step 8 · a different map, and your own pick</span>Friendship ties, 65%, 3 pre-wired:
+  org chart 3, most-named 8, brokers 3; the rule fails for all three
+Your own pick on advice ties, the CEO plus managers 1 and 10:
+  Pre-wiring 1, 7, 10: 4 of 21 back it; rule fails</div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Read it in this order.</strong> The tag first (measured or modelled), then the verdict line, then the comparison table. The strongest lesson is not the 21: it is that swapping vice president 14, who runs the biggest team, for vice president 18, who sits on the most routes, changes the result from 7 backers to all of them.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers what the 21 managers' ties show</span>
+      <h2>Asked, senior and brokering are three different people</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">Put the formal chart next to the two measured numbers and three different people come out on top. The most-asked manager is a vice president, 2. The top broker is a different vice president, 18. The CEO, 7, is asked by 13 colleagues, the same as manager 1, who has no one reporting to him. And the vice president with the biggest team, 14, brokers almost nothing.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six managers, two bar sets each. Asked by and betweenness: CEO 7, 13 and 27.6. VP 14 with a team of seven, 10 and 0.6. VP 2, 18 and 5.9. VP 18, 15 and 88.9, highlighted. Manager 1, 13 and 13.7. Manager 10, 9 and 18.3.">
+        <defs>
+          <filter id="s4cSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="31" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+        </defs>
+        <style>
+          .s4cH { font: 800 12px Inter, sans-serif; fill: #13292C; }
+          .s4cL { font: 600 12px Inter, sans-serif; fill: #13292C; }
+          .s4cA { font: 700 11px Inter, sans-serif; fill: #0B6E79; }
+          .s4cB { font: 800 11px Inter, sans-serif; fill: #7A3416; }
+          .s4cV { font: 800 12px Inter, sans-serif; fill: #064A52; }
+          .s4cN { font: 400 12px Inter, sans-serif; fill: #4F6366; }
+        </style>
+
+        <text class="s4cH" x="30" y="26">FORMAL ROLE AGAINST THE TWO MEASURED NUMBERS · advice ties</text>
+        <text class="s4cA" x="250" y="54">ASKED BY (in-degree)</text>
+        <text class="s4cA" x="510" y="54">BETWEENNESS</text>
+
+        <g filter="url(#s4cSk)" fill="none" stroke="#13292C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="250" y="70" width="144" height="22" rx="4" fill="#B5DDE1"/>
+          <rect x="250" y="110" width="111" height="22" rx="4" fill="#B5DDE1"/>
+          <rect x="250" y="150" width="200" height="22" rx="4" fill="#B5DDE1"/>
+          <rect x="250" y="190" width="167" height="22" rx="4" fill="#B5DDE1"/>
+          <rect x="250" y="230" width="144" height="22" rx="4" fill="#B5DDE1"/>
+          <rect x="250" y="270" width="100" height="22" rx="4" fill="#B5DDE1"/>
+          <rect x="510" y="70" width="93" height="22" rx="4" fill="#0B6E79"/>
+          <rect x="510" y="110" width="3" height="22" rx="1" fill="#0B6E79"/>
+          <rect x="510" y="150" width="20" height="22" rx="4" fill="#0B6E79"/>
+          <rect x="510" y="190" width="300" height="22" rx="4" fill="#B4532A"/>
+          <rect x="510" y="230" width="46" height="22" rx="4" fill="#0B6E79"/>
+          <rect x="510" y="270" width="62" height="22" rx="4" fill="#0B6E79"/>
+        </g>
+
+        <text class="s4cL" x="236" y="86" text-anchor="end">7 · CEO</text>
+        <text class="s4cL" x="236" y="126" text-anchor="end">14 · VP, team of 7</text>
+        <text class="s4cL" x="236" y="166" text-anchor="end">2 · VP, team of 3</text>
+        <text class="s4cB" x="236" y="206" text-anchor="end">18 · VP, team of 2</text>
+        <text class="s4cL" x="236" y="246" text-anchor="end">1 · manager</text>
+        <text class="s4cL" x="236" y="286" text-anchor="end">10 · manager</text>
+
+        <text class="s4cV" x="400" y="86">13</text>
+        <text class="s4cV" x="367" y="126">10</text>
+        <text class="s4cV" x="456" y="166">18</text>
+        <text class="s4cV" x="423" y="206">15</text>
+        <text class="s4cV" x="400" y="246">13</text>
+        <text class="s4cV" x="356" y="286">9</text>
+        <text class="s4cV" x="609" y="86">27.6</text>
+        <text class="s4cV" x="519" y="126">0.6</text>
+        <text class="s4cV" x="536" y="166">5.9</text>
+        <text class="s4cB" x="816" y="206">88.9</text>
+        <text class="s4cV" x="562" y="246">13.7</text>
+        <text class="s4cV" x="578" y="286">18.3</text>
+
+        <text class="s4cN" x="30" y="318">Krackhardt (1987), 21 managers. Bars drawn to scale within each column; numbers as the bench prints them.</text>
+        <text class="s4cN" x="30" y="340">The biggest team (VP 14) brokers 0.6. The smallest team (VP 18) brokers 88.9.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - team size, seniority, popularity and brokerage point at four different people</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What a data leader does with this<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>At Fernhollow, Sunniva cannot survey 21 managers before her proposal, and should not try (session 6 explains why network surveys need consent and care). What she can do is the session 1 question, asked in one-to-ones: "Who do you check this kind of thing with?" Names that come back from people in different departments are candidate brokers. Names that come back many times from the same department are the locally most-asked. The bench says those are different people, and that the brokers carry a proposal further.</p>
+        <p>The seniority lesson is narrower than it sounds. The CEO is the third broker here, and the brokers' plan includes him. What fails is starting from the chart: the CEO plus the vice president with the biggest team reached 7 of 21 because that vice president sits on almost no routes between other people.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>One person who asks only one person<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Manager 6 names exactly one person as a source of advice: vice president 21. On the bench that makes manager 6 easy to move (one backer is 100 percent of their advisers) and completely dependent on one relationship. Every organisation has people like this, often the longest-serving, and they are the first to feel abandoned when their one link leaves. The break button removes 18, not 21, so on the bench nobody is cut off; in your own map, look for the person with one line.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Weak ties travel further.</strong> Granovetter's 1973 paper argued that the people you know less well, the weak ties, are more likely to connect you to parts of the network your close circle does not reach (abstract read). A broker is the organisational version: the person whose acquaintances span departments. At Krackhardt's firm, vice president 18 runs a team of two and sits on more shortest advice routes than anyone else.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the anti-lever, the break button and the model's limits</span>
+      <h2>What breaks the plan, and what the bench cannot tell you</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">A bench that can only ever report good news measures nothing. This one has two ways to report a worse number: the anti-lever, which you have already run, and the break button, which takes the most important person out of the network and re-runs your plan without them.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two panels. Left, wrong way: keep the plan after manager 18 leaves; 21 and 7 alone reach 9 of 20 and the rule fails. Right, right way: recompute betweenness on the 20 who remain; the new top three are 21, 10 and 4, and 20 of 20 back it.">
+        <defs>
+          <filter id="s4dSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="43" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+        </defs>
+        <style>
+          .s4dH { font: 800 12px Inter, sans-serif; fill: #13292C; }
+          .s4dS { font: 400 11px Inter, sans-serif; fill: #4F6366; }
+          .s4dL { font: 600 12px Inter, sans-serif; fill: #13292C; }
+          .s4dR { font: 800 12px Inter, sans-serif; fill: #991B1B; }
+          .s4dG { font: 800 12px Inter, sans-serif; fill: #064A52; }
+          .s4dN { font: 400 12px Inter, sans-serif; fill: #4F6366; }
+        </style>
+
+        <text class="s4dH" x="30" y="30">MANAGER 18, THE TOP BROKER, LEAVES · advice ties, 65%, brokers' plan</text>
+
+        <g filter="url(#s4dSk)" fill="none" stroke="#13292C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="40" y="50" width="390" height="180" rx="12" transform="rotate(-0.4 235 140)" fill="#FEF2F2" stroke="#FCA5A5"/>
+          <rect x="450" y="50" width="390" height="180" rx="12" transform="rotate(0.4 645 140)" fill="#E8F5F6" stroke="#0B6E79"/>
+        </g>
+
+        <text class="s4dR" x="58" y="84">✗ Keep the plan as it stood</text>
+        <text class="s4dL" x="58" y="114">Before: 18, 21, 7 pre-wired, 21 of 21</text>
+        <text class="s4dL" x="58" y="134">18 leaves; 21 and 7 alone: 9 of 20</text>
+        <text class="s4dL" x="58" y="154">Decision rule: fails</text>
+        <text class="s4dS" x="58" y="190">No pair is cut off, but 43 ordered pairs</text>
+        <text class="s4dS" x="58" y="206">now need a longer route</text>
+
+        <text class="s4dG" x="468" y="84">✓ Re-map on the 20 who remain</text>
+        <text class="s4dL" x="468" y="114">Recompute betweenness without 18</text>
+        <text class="s4dL" x="468" y="134">New top three: 21, 10, 4</text>
+        <text class="s4dL" x="468" y="154">20 of 20 back it; rule passes</text>
+        <text class="s4dS" x="468" y="190">The CEO is no longer a top-three broker,</text>
+        <text class="s4dS" x="468" y="206">and still ends up backing it</text>
+
+        <text class="s4dN" x="30" y="268">Modelled backers on real ties. A network map goes stale the day one broker leaves: re-run it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the plan was right for the network it was drawn on; the network changed</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The anti-lever, honestly sized<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>At the default, pre-wiring the top of the chart reaches 7 of 21 and the brokers reach 21. That gap is real for these ties and this rule, and it is not universal. Set the threshold to 30 percent and every strategy reaches 21: when everyone moves easily, it does not matter who you start with. Set pre-wire to 1 and the threshold to 50 or lower and the CEO alone (2 backers) beats vice president 18 alone (1). The defensible claim is the one the comparison table shows across the middle of the slider: starting from the chart is never better than starting from the brokers once you have two or three conversations to spend.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Advice ties and friendship ties disagree<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Switch the bench to friendship ties and the map changes. The top friendship broker is manager 17, not 18; the most-named friends are 2, 1 and 12. At the default, the most-named pick reaches 8 and the brokers 3, and the rule fails for every chart, popularity and broker plan, because the CEO named no one as a friend: on friendship ties he can only back the proposal if you pre-wire him personally.</p>
+        <p>Krackhardt's own argument, in later work on the same tradition, was that the friendship network matters for anticipating political resistance (reported). The bench does not settle which network carries a decision; that depends on the decision. A budget call travels on advice; a reorganisation that threatens people's colleagues may travel on friendship. Ask which ties your decision rides on before you trust either map.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the model leaves out<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Threshold models are a simplification, and the disagreement is worth knowing. They treat influence as counting heads among your contacts; real people weigh a trusted adviser above three acquaintances, change their minds back, and respond to the content of a proposal, not just its supporters. Kempe and colleagues' version draws a different random threshold for each person; this bench uses one shared threshold so the numbers are exact, which makes cascades more all-or-nothing than real organisations are.</p>
+        <p>The ties are also old and self-reported: one firm, one moment, 21 people, as each person described their own ties. The 1987 paper itself was about how differently people perceive the same network, which is a caution against trusting any one person's map, yours included. What survives these limits is the ordering lesson, and it matches the qualitative research on brokers: where you start matters, and the formal chart is a poor guide to where to start.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 5</h2>
+      <span class="tag exercise">30 min</span>
+    </div>
+    <ol>
+      <li><strong>Find your three brokers.</strong> Go back to your session 1 path. Which names came up from people in different departments? Those are your candidate brokers. Which names came up many times from one department? Those are the locally most-asked.</li>
+      <li><strong>Run the bench at your threshold.</strong> Is your organisation quick to move (try 40 percent) or slow (try 75)? Note how the comparison table changes, and which strategy holds up.</li>
+      <li><strong>Plan for one exit.</strong> If your top broker left next month, who would you re-map to? Name them now.</li>
+      <li><strong>Pick your own three on the bench</strong> before looking at the strategy buttons, then compare. Write one sentence on why your pick did better or worse.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 4 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · On advice ties at the default, why does the brokers' plan (18, 21, 7) reach all 21 while the org chart's plan (7, 14, 21) reaches 7?</p>
+      <button class="qopt" type="button">A · Because 18 is more senior than 14</button>
+      <button class="qopt" type="button">B · Because 18 sits on far more of the shortest advice routes between colleagues (88.9 against 0.6), so support reaches groups that 14 never connects</button>
+      <button class="qopt" type="button">C · Because 18 is asked for advice by the most people</button>
+      <button class="qopt" type="button">D · Because the CEO is not in the org chart plan</button>
+      <p class="qwhy">Both are vice presidents, so seniority is equal; the most-asked person is 2, not 18; and the CEO is in both plans. The only difference is the swap of 14 for 18, and betweenness is what separates them.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">2 · Which statement about the bench's numbers is accurate?</p>
+      <button class="qopt" type="button">A · The number of backers is measured from Krackhardt's survey</button>
+      <button class="qopt" type="button">B · Betweenness is a model, so it changes with the threshold slider</button>
+      <button class="qopt" type="button">C · The 21 of 21 is a forecast of how your own executive team will respond</button>
+      <button class="qopt" type="button">D · The ties, in-degree and betweenness are measured; who backs the proposal comes from a stated threshold rule, so the order of strategies is the claim, not the exact counts</button>
+      <p class="qwhy">Nobody in the 1987 firm was asked about any proposal. The ties are real; the spread is a model with one shared threshold, which real people do not obey. The slider changes backers, never betweenness.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">3 · Manager 18 leaves. The brokers' plan falls from 21 of 21 to 9 of 20. What is the right reading?</p>
+      <button class="qopt" type="button">A · Brokers are unreliable, so pre-wire the top of the chart instead</button>
+      <button class="qopt" type="button">B · The network has split: 18 was the only link between groups</button>
+      <button class="qopt" type="button">C · The map is out of date; re-mapped on the 20 who remain (21, 10, 4) support reaches 20 of 20, so re-map when a broker leaves</button>
+      <button class="qopt" type="button">D · The model is broken, because removing one person should not change anything</button>
+      <p class="qwhy">No pair is cut off (0), so B is wrong; 43 ordered pairs just need longer routes. The chart's plan still reaches only 9. A changed network needs a new map, and the re-mapped brokers carry it again.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Krackhardt (1987), Cognitive social structures, Social Networks 9(2):109-134</span><span class="note">Abstract read; the 21 managers' advice, friendship and reports-to ties are the bench's rows, as shipped in the CRAN package NetData 0.3 (GPL-2), with the published counts checked (190, 102, 20). Firm details reported from the UCINET dataset page</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Kempe, Kleinberg and Tardos (2003), Maximizing the spread of influence through a social network, KDD</span><span class="note">Read at source; the linear threshold model, here simplified to one shared threshold and labelled as a model</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Granovetter (1973), The strength of weak ties; Burt (2004), Structural holes and good ideas</span><span class="note">Abstracts read; the broker idea paraphrased from them</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Krackhardt on friendship ties and political resistance</span><span class="note">Reported from secondary descriptions of his later chapter; not read at source</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Fernhollow Freight and Sunniva</span><span class="note">Constructed for teaching; every bench number is about Krackhardt's 21 managers, never about Fernhollow</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three numbers</b><span>In-degree is counted, betweenness is computed, backing is modelled. Know which you are reading.</span></div>
+      <div class="cheat-item"><b>Asked is not brokering</b><span>Most-asked: VP 2. Top broker: VP 18. Biggest team: VP 14, who brokers 0.6.</span></div>
+      <div class="cheat-item"><b>The anti-lever</b><span>Chart first: 7 of 21. Brokers first: 21 of 21. Same CEO in both plans.</span></div>
+      <div class="cheat-item"><b>The slider</b><span>At 30% everything wins; at 80% nothing does. Strategy matters in the middle.</span></div>
+      <div class="cheat-item"><b>The broker leaves</b><span>21 of 21 falls to 9 of 20. Re-map and it is 20 of 20. Maps go stale.</span></div>
+      <div class="cheat-item"><b>Which ties?</b><span>Advice and friendship give different brokers. Ask which ties your decision rides on.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>The bench says where to start. Session 5 is how: sequencing the one-to-ones before the room, what each person trades in, what the persuasion research does and does not show, and the line between influence and manipulation.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 4 of 6 · learn-stakeholder-management-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="03-managing-up.html">← Prev: Managing up</a> &nbsp;·&nbsp; <a href="05-coalitions-and-pre-wiring.html">Next: Coalitions and pre-wiring →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/stk-sample.js?v=1"></script>
+<script src="../assets/stk-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

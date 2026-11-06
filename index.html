@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Six sessions on managing up and sideways for data and AI leads: who really decides, what each executive is measured on and fears, managing your boss, an influence-network bench built on 21 real managers' advice ties, coalitions and pre-wiring, and repairing trust after a wrong number. Free, by Phoebe Fu.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Learn Stakeholder Management with Phoebe">
+<meta property="og:description" content="Managing up and sideways: the map of who decides, what they fear, and how a data leader earns the room. 21 real managers' advice ties, computed in your browser.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-stakeholder-management-with-phoebe/">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-stakeholder-management-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learn Stakeholder Management with Phoebe">
+<meta name="twitter:description" content="Who do you pre-wire? 21 real managers' advice ties, computed in your browser.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-stakeholder-management-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Learn Stakeholder Management with Phoebe</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: 1; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(var(--shadow-rgb),.16); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo-deep); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--muted); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,var(--indigo-50)); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .not-this { border: 1px solid var(--hairline); border-left: 4px solid var(--clay); border-radius: var(--radius); background: #fff; padding: 1.1rem 1.3rem; margin-top: 1.2rem; }
+  .not-this h3 { font-size: .95rem; font-weight: 800; margin-bottom: .5rem; }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn with Phoebe · Leadership</div>
+    <h1>Learn <span class="accent">Stakeholder Management</span> with Phoebe</h1>
+    <p class="sub">Managing up and sideways: the map of who decides, what they fear, and how a data leader earns the room. Six sessions for heads of data, analytics managers and senior individual contributors who need executives and peers they do not manage to say yes. The org chart says who signs; these sessions are about who those people listen to first, what each of them is measured on, how to manage the boss you have, how to sequence the conversations before the meeting, and how to recover when you lose someone. One constructed running case, a logistics company's new head of data asking for one customer-data platform, and one bench: the real advice network of 21 managers, computed in your browser.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="21">21</b><span>real managers on the bench</span></div>
+      <div class="stat"><b data-count="190">190</b><span>advice ties measured</span></div>
+      <div class="stat"><b data-count="7">7</b><span>of 21 won by pre-wiring the top of the chart</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The six sessions 🧭 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· from the first map of the room to the long game</span></h2>
+      <p class="plede">The running case is <strong>Fernhollow Freight, a constructed mid-size logistics company</strong>. Sunniva Holm, its newly hired head of data, wants one customer-data platform approved: one shared customer record across sales, depots and billing. Five executives and one long-serving depot planning manager stand between her and a yes. Fernhollow and everyone in it are invented for teaching, and every page says so.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-who-actually-decides.html" style="--diff:#34D399">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Session 1 · foundations</span>
+        <h3>Who actually decides</h3>
+        <p>The formal chart against the route a decision really travels. Authority against influence, and a map of who must say yes, who can say no and who is asked first.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span></span>
+      </a>
+      <a class="course-card" href="courses/02-measured-on-and-afraid-of.html" style="--diff:#FBBF24">
+        <span class="cicon">📋</span>
+        <span class="cnum">Session 2 · core</span>
+        <h3>What they are measured on, and what they fear</h3>
+        <p>Each executive's scorecard, what your proposal quietly costs them, and the trust equation as a checklist rather than a law.</p>
+        <span class="meta"><span class="pill">their scorecard</span></span>
+      </a>
+      <a class="course-card" href="courses/03-managing-up.html" style="--diff:#FBBF24">
+        <span class="cicon">⬆️</span>
+        <span class="cnum">Session 3 · core</span>
+        <h3>Managing up</h3>
+        <p>Gabarro and Kotter's "Managing your boss", read at source: the boss's goals, pressures and style, your own, and a relationship that fits both.</p>
+        <span class="meta"><span class="pill">mutual dependence</span></span>
+      </a>
+      <a class="course-card" href="courses/04-the-influence-network-bench.html" style="--diff:#F87171">
+        <span class="cicon">🕸️</span>
+        <span class="cnum">Session 4 · bench night</span>
+        <h3>The influence-network bench</h3>
+        <p>21 real managers' advice ties. Who is asked, who brokers, and how far a proposal spreads when you pre-wire the top of the chart, the most-asked or the brokers. Then the broker leaves.</p>
+        <span class="meta"><span class="pill amber">★ the bench</span></span>
+      </a>
+      <a class="course-card" href="courses/05-coalitions-and-pre-wiring.html" style="--diff:#FB923C">
+        <span class="cicon">🤝</span>
+        <span class="cnum">Session 5 · deeper</span>
+        <h3>Coalitions and pre-wiring</h3>
+        <p>Sequencing the one-to-ones before the room, the currencies people trade in, what the persuasion research does and does not show, and where influence ends and manipulation starts.</p>
+        <span class="meta"><span class="pill">before the room</span></span>
+      </a>
+      <a class="course-card" href="courses/06-losing-a-stakeholder.html" style="--diff:#FB923C">
+        <span class="cicon">🧩</span>
+        <span class="cnum">Session 6 · deeper</span>
+        <h3>Losing a stakeholder, and the long game</h3>
+        <p>Repairing trust after a wrong number or a missed date, when an apology works and when it backfires, and a one-page stakeholder operating plan.</p>
+        <span class="meta"><span class="pill amber">🔒 the plan</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>foundations</span>
+      <span><i style="background:#FBBF24"></i>core</span>
+      <span><i style="background:#FB923C"></i>deeper</span>
+      <span><i style="background:#F87171"></i>bench night</span>
+    </div>
+  </section>
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>Your passport 🎫</h2>
+      <p class="plede">Clear all three quiz questions in a session and it gets stamped. Six stamps means you can map who really decides, read an executive's scorecard and fears, manage the boss you have, find the brokers in a real network, sequence a coalition before the room, and repair a relationship after you lose it. Stamps live in this browser only.</p>
+    </div>
+    <div class="pp-strip"></div>
+  </section>
+  <section class="section">
+    <div class="not-this">
+      <h3>What this is not, so you land in the right place 🧭</h3>
+      <table class="clean">
+        <tr><th>If your question is</th><th>Go here instead</th></tr>
+        <tr><td>How do I build a power/interest grid, a comms plan or a steering cadence for a programme?</td><td><a href="https://phoebefu6.github.io/learn-data-pmo-with-phoebe/courses/b6-stakeholder-management.html">Data PMO, Stakeholder management ↗</a></td></tr>
+        <tr><td>Who is responsible, accountable, consulted and informed on each task?</td><td><a href="https://phoebefu6.github.io/learn-data-pmo-with-phoebe/courses/b4-raci-and-rr.html">Data PMO, RACI ↗</a></td></tr>
+        <tr><td>What do marketing, brand and BD teams get measured on, and how do I push back on their requests?</td><td><a href="https://phoebefu6.github.io/learn-marketing-analytics-with-phoebe/courses/p1-in-their-shoes.html">Marketing Analytics, Partnership track ↗</a></td></tr>
+        <tr><td>Who decides what inside my own team?</td><td><a href="https://phoebefu6.github.io/learn-team-management-with-phoebe/courses/02-who-decides-what.html">Team Management, Who decides what ↗</a></td></tr>
+        <tr><td>How do I run the meeting itself?</td><td><a href="https://phoebefu6.github.io/learn-facilitation-with-phoebe/">Facilitation ↗</a></td></tr>
+        <tr><td>How do I trade across issues and know my walk-away point?</td><td><a href="https://phoebefu6.github.io/learn-negotiation-with-phoebe/">Negotiation ↗</a></td></tr>
+        <tr><td><strong>I need executives and peers I do not manage to back something, and I want to know who to talk to, in what order, and how to keep them.</strong></td><td><strong>you are in the right place</strong></td></tr>
+      </table>
+      <p style="margin-top:.7rem;font-size:.86rem;color:var(--muted)"><strong>Influence across teams and upwards.</strong> Planning grids, RACI, meeting craft and deal mechanics are taught next door and linked from here rather than repeated. Stress on these pages means workload and planning, never medical or clinical advice; for the body side, see the movement and wellbeing courses planned on the <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe hub ↗</a>.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Three doors into the same conviction: the chart tells you who signs, the network tells you how to get there.</p>
+      <div class="path"><b>📅 My proposal goes to the exec team soon</b>
+        <a class="pstep" href="courses/01-who-actually-decides.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-measured-on-and-afraid-of.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-coalitions-and-pre-wiring.html">5</a>
+        <span style="font-size:.82rem;color:var(--muted)">map the path, read their costs, sequence the conversations</span>
+      </div>
+      <div class="path"><b>🧑‍💼 My boss and I keep missing each other</b>
+        <a class="pstep" href="courses/03-managing-up.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-losing-a-stakeholder.html">6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-measured-on-and-afraid-of.html">2</a>
+        <span style="font-size:.82rem;color:var(--muted)">fit the relationship, repair it, see their scorecard</span>
+      </div>
+      <div class="path"><b>🧭 The whole craft</b>
+        <a class="pstep" href="courses/01-who-actually-decides.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-measured-on-and-afraid-of.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-managing-up.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-the-influence-network-bench.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-coalitions-and-pre-wiring.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-losing-a-stakeholder.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">from the first map to the long game</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>What is honest here 🧾</h2>
+      <p class="plede">Influence advice travels with famous numbers, and several of the most quoted have no source behind them. Each claim on these pages carries its status.</p>
+    </div>
+    <table class="clean">
+      <tr><th>Claim</th><th>Status</th></tr>
+      <tr><td>Who is asked for advice, betweenness, and who can still reach whom when someone leaves</td><td><strong>Really computed</strong> in your browser from the advice and friendship ties of 21 managers (Krackhardt, 1987)</td></tr>
+      <tr><td>How many managers end up backing a proposal</td><td><strong>Modelled</strong> by one threshold rule printed on the widget and labelled on every number; read the order of the strategies, not the exact counts</td></tr>
+      <tr><td>"70 percent of change programmes fail"</td><td><strong>No evidence found.</strong> A 2011 review traced five published sources for the figure and found no valid empirical basis for any of them</td></tr>
+      <tr><td>"People leave managers, not companies"</td><td><strong>A slogan.</strong> The checkable version is narrower: Gallup reports that in a 2015 study of 7,272 US adults, one in two had left a job to get away from a manager</td></tr>
+      <tr><td>The trust equation</td><td><strong>A practitioner model</strong> from a 2000 consulting book, useful as a checklist; no peer-reviewed test was found</td></tr>
+      <tr><td>Apology against denial after a trust violation</td><td><strong>Abstract read</strong> of a 2004 experiment: the better repair depends on whether the violation was about competence or integrity. Session 6 teaches the nuance</td></tr>
+      <tr><td>Fernhollow Freight, Sunniva and every Fernhollow number</td><td><strong>Constructed,</strong> for teaching</td></tr>
+    </table>
+  </section>
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole path at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+  <footer class="pagefoot">
+    <span>learn-stakeholder-management-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span>Neighbours on the shelf: <a href="https://phoebefu6.github.io/learn-negotiation-with-phoebe/">Negotiation ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-communication-with-phoebe/">Communication ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-facilitation-with-phoebe/">Facilitation ↗</a></span>
+  </footer>
+</main>
+<script>
+window.MINDMAP_DATA = {
+ "title": "Stakeholder\nManagement",
+ "centerColor": "#064A52",
+ "sessions": [
+  {
+   "label": "Who actually\ndecides",
+   "href": "courses/01-who-actually-decides.html",
+   "color": "#34D399",
+   "concepts": [
+    {
+     "label": "Authority vs influence",
+     "href": "courses/01-who-actually-decides.html"
+    },
+    {
+     "label": "The real decision path",
+     "href": "courses/01-who-actually-decides.html"
+    },
+    {
+     "label": "Yes, veto, asked first",
+     "href": "courses/01-who-actually-decides.html"
+    }
+   ]
+  },
+  {
+   "label": "Measured on,\nand afraid of",
+   "href": "courses/02-measured-on-and-afraid-of.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "Their scorecard",
+     "href": "courses/02-measured-on-and-afraid-of.html"
+    },
+    {
+     "label": "What it costs them",
+     "href": "courses/02-measured-on-and-afraid-of.html"
+    },
+    {
+     "label": "The trust equation",
+     "href": "courses/02-measured-on-and-afraid-of.html"
+    }
+   ]
+  },
+  {
+   "label": "Managing\nup",
+   "href": "courses/03-managing-up.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "Mutual dependence",
+     "href": "courses/03-managing-up.html"
+    },
+    {
+     "label": "Their goals and style",
+     "href": "courses/03-managing-up.html"
+    },
+    {
+     "label": "Options, not problems",
+     "href": "courses/03-managing-up.html"
+    }
+   ]
+  },
+  {
+   "label": "The influence-\nnetwork bench",
+   "href": "courses/04-the-influence-network-bench.html",
+   "color": "#F87171",
+   "concepts": [
+    {
+     "label": "Asked vs senior",
+     "href": "courses/04-the-influence-network-bench.html"
+    },
+    {
+     "label": "Brokers carry it",
+     "href": "courses/04-the-influence-network-bench.html"
+    },
+    {
+     "label": "The broker leaves",
+     "href": "courses/04-the-influence-network-bench.html"
+    }
+   ]
+  },
+  {
+   "label": "Coalitions and\npre-wiring",
+   "href": "courses/05-coalitions-and-pre-wiring.html",
+   "color": "#FB923C",
+   "concepts": [
+    {
+     "label": "Sequence the one-to-ones",
+     "href": "courses/05-coalitions-and-pre-wiring.html"
+    },
+    {
+     "label": "Currencies of exchange",
+     "href": "courses/05-coalitions-and-pre-wiring.html"
+    },
+    {
+     "label": "Where influence ends",
+     "href": "courses/05-coalitions-and-pre-wiring.html"
+    }
+   ]
+  },
+  {
+   "label": "Losing a stakeholder,\nthe long game",
+   "href": "courses/06-losing-a-stakeholder.html",
+   "color": "#FB923C",
+   "concepts": [
+    {
+     "label": "Apology or denial",
+     "href": "courses/06-losing-a-stakeholder.html"
+    },
+    {
+     "label": "Repair a wrong number",
+     "href": "courses/06-losing-a-stakeholder.html"
+    },
+    {
+     "label": "The operating plan",
+     "href": "courses/06-losing-a-stakeholder.html"
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
